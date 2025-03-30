@@ -17,21 +17,17 @@ class inf extends StatelessWidget {
       height: 70,
       width: 120,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            alignment: Alignment.topLeft,
-            child: Text(name, style: TextStyle(fontSize: 24)),
-          ),
+          Text(name, style: TextStyle(fontSize: 24)),
           Row(
             children: [
               Container(
                 height: 20,
                 width: 20,
-                decoration: BoxDecoration(color: color),
+                color: color,
               ),
-              SizedBox(
-                child: Text("  ${num}g", style: TextStyle(fontSize: 24),
-                ),
+              Text("  ${num}g", style: TextStyle(fontSize: 24),
               ),
             ],
           ),

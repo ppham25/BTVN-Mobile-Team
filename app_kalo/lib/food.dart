@@ -27,47 +27,24 @@ class food extends StatelessWidget {
         children: [
           Row(
             children: [
-              SizedBox(
-                height: 40,
-                width: 300,
-                child: Text(name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-              ),
-              Container(
-                width: 60,
-                alignment: Alignment.centerRight,
-                child: Icon(Icons.edit, size: 30),
-              ),
+              Text(name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+              Spacer(),
+              Icon(Icons.edit, size: 30),
             ],
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 1,
-                child: SizedBox(
-                  height: 50,
-                  child: Text(kcal.toString(), style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),),
+              Text(kcal.toString(), style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),),
+              Container(
+                height: 40,
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  " kcal",
+                  style: TextStyle(fontSize: 24, color: Colors.grey),
                 ),
               ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  height: 50,
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    "kcal",
-                    style: TextStyle(fontSize: 24, color: Colors.grey),
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  height: 50,
-                  alignment: Alignment.centerRight,
-                  child: Text("${edit}g", style: TextStyle(color: Colors.grey, fontSize: 24),),
-                ),
-              ),
+              Spacer(),
+              Text("${edit}g", style: TextStyle(color: Colors.grey, fontSize: 24),),
             ],
           ),
 

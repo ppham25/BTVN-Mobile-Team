@@ -42,65 +42,32 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          width: 300,
-                          height: 55,
-                          child: Text(
-                            "Breakfast",
-                            style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        Text(
+                          "Breakfast",
+                          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
-                          width: 300,
-                          height: 35,
-                          child: Text(
-                            "Today",
-                            style: TextStyle(fontSize: 24, color: Colors.black87,),
-                          ),
+                        Text(
+                          "Today",
+                          style: TextStyle(fontSize: 24, color: Colors.black54),
                         ),
                       ],
                     ),
-                    SizedBox(
-                      width: 81,
-                      height: 90,
-                      child: Icon(
-                        Icons.add,
-                        size: 60,
-                        weight: 1,
-                        color: Colors.black87,
-                      ),
-                    ),
+                    Spacer(),
+                    Icon(Icons.add, size: 60, color: Colors.black54),
                   ],
                 ),
                 Divider(color: Colors.grey, thickness: 2),
                 Row(
                   children: [
-                    Container(
-                      height: 90,
-                      width: 130,
-                      alignment: Alignment.centerLeft,
-                      child: Text("452", style: TextStyle(fontSize: 70)),
-                    ),
-                    Container(
-                      height: 80,
-                      width: 125,
-                      alignment: Alignment.bottomLeft,
-                      child: Text("kcal", style: TextStyle(fontSize: 30)),
-                    ),
-                    SizedBox(
-                      height: 35,
-                      width: 120,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                        ),
-                        child: Text("Normal", style: TextStyle(color: Colors.white, fontSize: 20),),
-                      ),
+                    Text("452", style: TextStyle(fontSize: 70)),
+                    Container(height: 70, width: 65,alignment: Alignment.bottomLeft ,child: Text(" kcal", style: TextStyle(fontSize: 30,))),
+                    Spacer(),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                      child:  Text("Normal", style: TextStyle(color: Colors.white, fontSize: 20)),
                     ),
                   ],
                 ),
