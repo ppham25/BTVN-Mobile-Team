@@ -64,6 +64,8 @@ class MyApp extends StatelessWidget {
                     Text("452", style: TextStyle(fontSize: 70)),
                     Container(height: 70, width: 65,alignment: Alignment.bottomLeft ,child: Text(" kcal", style: TextStyle(fontSize: 30,))),
                     Spacer(),
+
+
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
@@ -71,12 +73,23 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
+
                 Row(
                   children: [
-                    nutri(name: "Protein", num: 13, color: Colors.deepPurpleAccent, max: 80,),
-                    nutri(name: "Fat", num: 20, color: Colors.orange, max: 60),
-                    nutri(name: "Carbs", num: 19, color: Colors.black87, max: 200,),
+                    nutri(name: "Protein", amoun: 13, color: Colors.deepPurpleAccent, total: 80,),
+                    nutri(name: "Fat", amoun: 20, color: Colors.orange, total: 60),
+                    nutri(name: "Carbs", amoun: 19, color: Colors.black87, total: 200,),
                   ],
+                ),
+                // lay anh tu file
+                SizedBox(
+                  height: 100,
+                  width: 200,
+                  child: Image.asset(
+                    'asset/image/12d14cda9d05f94b0332a998a7ebb508.jpg',
+                    fit: BoxFit.cover,
+                  ),
+
                 ),
                 food(name: "Fried eggs", kcal: 378, pro: 12, fat: 17, car: 17, edit: "100",),
                 food(name: "Grilled Chicken", kcal: 165, pro: 31, fat: 3.6, car: 0, edit: "150",),

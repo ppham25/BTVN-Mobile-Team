@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class nutri extends StatelessWidget {
   final String name;
-  final int num, max;
+  final int amoun, total;
   final Color color;
   const nutri({
     super.key,
     required this.name,
-    required this.num,
+    required this.amoun,
     required this.color,
-    required this.max,
+    required this.total,
   });
 
   @override
@@ -25,12 +25,12 @@ class nutri extends StatelessWidget {
         children: [
           Text(name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
           LinearProgressIndicator(
-            value: num / max,
+            value: amoun / total,
             backgroundColor: Colors.grey[300],
             color: color,
             minHeight: 8,
           ),
-          Text("$num/${max}g", style: TextStyle(fontSize: 20)),
+          Text("$amoun/${total}g", style: TextStyle(fontSize: 20)),
         ],
       ),
     );
